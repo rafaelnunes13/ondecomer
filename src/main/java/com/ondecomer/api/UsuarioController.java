@@ -12,13 +12,13 @@ import com.ondecomer.api.dto.UsuarioRequest;
 import com.ondecomer.model.UsuarioModel;
 import com.ondecomer.repository.UsuarioRepository;
 
-@RestController("/usuario")
+@RestController()
 public class UsuarioController {
 
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
-	@PostMapping
+	@PostMapping("/usuario")
 	public ResponseEntity<UsuarioModel> adicionarUsuario(@RequestBody UsuarioRequest request) {
 	
 		var usuario = new UsuarioModel(request.nome, request.email);
@@ -28,7 +28,7 @@ public class UsuarioController {
 		return ResponseEntity.ok(usuario);
 	}
 
-	@DeleteMapping
+	@DeleteMapping("/usuario/{email}")
 	public ResponseEntity<Object> removerUsuario(@PathVariable String email) {
 
 		this.usuarioRepository.deleteById(email);
