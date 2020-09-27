@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +18,8 @@ import com.ondecomer.api.dto.RestauranteRequest;
 import com.ondecomer.model.RestauranteModel;
 import com.ondecomer.repository.RestauranteRepository;
 
-@RestController()
+@CrossOrigin
+@RestController
 public class RestauranteController {
 
 	@Autowired

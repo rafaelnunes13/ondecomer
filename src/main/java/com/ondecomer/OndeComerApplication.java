@@ -20,7 +20,7 @@ public class OndeComerApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**");
+				registry.addMapping("/ondecomer").allowedOrigins("http://localhost:4200");
 			}
 		};
 	}
