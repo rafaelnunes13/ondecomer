@@ -1,0 +1,15 @@
+com/ondecomer/api/UsuarioController.class
+com/ondecomer/model/LocalizacaoModel.class
+com/ondecomer/api/dto/RestauranteRequest.class
+com/ondecomer/api/dto/UsuarioRequest.class
+com/ondecomer/model/RestricoesEnum.class
+com/ondecomer/model/UsuarioModel.class
+com/ondecomer/SwaggerConfig.class
+com/ondecomer/OndeComerApplication$1.class
+com/ondecomer/api/RestauranteController.class
+com/ondecomer/OndeComerApplication.class
+com/ondecomer/model/CardapioModel.class
+com/ondecomer/repository/RestauranteRepository.class
+com/ondecomer/repository/UsuarioRepository.class
+com/ondecomer/model/ItemModel.class
+com/ondecomer/model/RestauranteModel.class
