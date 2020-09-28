@@ -17,21 +17,25 @@ public class RestauranteModel {
 	public LocalizacaoModel localizacao;
 
 	public List<CardapioModel> cardapios;
+
+	public List<RestricoesEnum> restricoes;
 	
-	public RestauranteModel(String id, String nome, LocalizacaoModel localizacao, List<CardapioModel> cardapios) {
+	public RestauranteModel(String id, String nome, LocalizacaoModel localizacao, List<CardapioModel> cardapios, List<RestricoesEnum> restricoes) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.localizacao = localizacao;
 		this.cardapios = cardapios;
+		this.restricoes = restricoes;
 	}
 	
-	public RestauranteModel(String nome, LocalizacaoModel localizacao, List<CardapioModel> cardapios) {
+	public RestauranteModel(String nome, LocalizacaoModel localizacao, List<CardapioModel> cardapios, List<RestricoesEnum> restricoes) {
 		super();
 		this.id = UUID.randomUUID().toString();
 		this.nome = nome;
 		this.localizacao = localizacao;
 		this.cardapios = cardapios;
+		this.restricoes = restricoes;
 	}
 	
 	public RestauranteModel() {
@@ -68,5 +72,13 @@ public class RestauranteModel {
 
 	public void setCardapios(List<CardapioModel> cardapios) {
 		this.cardapios = cardapios;
+	}
+
+	public List<RestricoesEnum> getRestricoes() {
+		return restricoes;
+	}
+
+	public void setRestricoes(List<RestricoesEnum> restricoes) {
+		this.restricoes = restricoes;
 	}
 }

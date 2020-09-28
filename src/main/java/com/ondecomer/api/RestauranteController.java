@@ -31,7 +31,8 @@ public class RestauranteController {
 		var restaurante = new RestauranteModel(
 			request.nome,
 			request.localizacao,
-			request.cardapios
+			request.cardapios,
+			request.restricoes
 		);
 		
 		this.restauranteRepository.insert(restaurante);
@@ -50,11 +51,12 @@ public class RestauranteController {
 			return ResponseEntity.notFound().build();
 		}
 		
-		var restaurante = new RestauranteModel(
-				request.nome,
-				request.localizacao,
-				request.cardapios
-				);
+		var restaurante = restauranteOptional.get();
+		
+		restaurante.setNome(request.nome);
+		restaurante.setLocalizacao(request.localizacao);
+		restaurante.setCardapios(request.cardapios);
+		restaurante.setRestricoes(request.restricoes);
 		
 		this.restauranteRepository.save(restaurante);
 		

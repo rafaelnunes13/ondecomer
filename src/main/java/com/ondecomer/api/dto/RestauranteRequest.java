@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.ondecomer.model.CardapioModel;
 import com.ondecomer.model.LocalizacaoModel;
+import com.ondecomer.model.RestricoesEnum;
 
 public class RestauranteRequest {
 
@@ -12,4 +13,6 @@ public class RestauranteRequest {
 	public LocalizacaoModel localizacao;
 
 	public List<CardapioModel> cardapios;
+	
+	public List<RestricoesEnum> restricoes;
 }
